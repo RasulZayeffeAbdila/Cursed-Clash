@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CURSED CLASH v5.2</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:100%; height:100%; overflow:hidden; background:#000; cursor:none; }
+canvas { display:block; width:100vw; height:100vh; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+// ── Bootstrap — canvas + ctx available globally before any module ──
+const c = document.getElementById('c');
+const ctx = c.getContext('2d');
+c.width = 1280; c.height = 720;
+</script>
+
+<!--
+  ┌─────────────────────────────────────────────────────┐
+  │  CURSED CLASH · Module load order                   │
+  │                                                     │
+  │  cc_constants.js  physics, game modes, vows, input  │
+  │  cc_utils.js      text, buttons, history, hex8      │
+  │  cc_sfx.js        Web Audio SFX engine              │
+  │  cc_chars.js      CHARS data + global state vars    │
+  │  cc_icons.js      drawCharIcon, drawSkillIcon       │
+  │  cc_player.js     Player class + all skill methods  │
+  │  cc_fx.js         effects system                    │
+  │  cc_combat.js     domain clash                      │
+  │  cc_ai.js         PvAI brain + AI diff menu         │
+  │  cc_ui.js         all screen-drawing functions      │
+  │  cc_input.js      onKeyDown, onMouseClick           │
+  │  cc_flow.js       match/round flow + unlock checks  │
+  │  cc_loop.js       main animation loop               │
+  └─────────────────────────────────────────────────────┘
+-->
+
+<script src="cc_constants.js"></script>
+<script src="cc_utils.js"></script>
+<script src="cc_sfx.js"></script>
+<script src="cc_chars.js"></script>
+<script src="cc_icons.js"></script>
+<script src="cc_player.js"></script>
+<script src="cc_fx.js"></script>
+<script src="cc_combat.js"></script>
+<script src="cc_ai.js"></script>
+<script src="cc_ui.js"></script>
+<script src="cc_input.js"></script>
+<script src="cc_flow.js"></script>
+<script src="cc_loop.js"></script>
+</body>
+</html>
